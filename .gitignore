@@ -31,10 +31,8 @@ setup.sh
 quick-setup.sh
 start-server.sh
 
-# Videos grandes (deben estar en CDN o servidor externo)
-public/videos/*.mp4
-public/videos/*.mov
-public/videos/*.avi
+# Videos originales muy pesados (backup local)
+public/videos/*-original-backup.*
 
 # IDEs
 .vscode/

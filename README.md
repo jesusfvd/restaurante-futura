@@ -56,6 +56,8 @@ cp .env.example .env
 
 Edita el archivo `.env` con tus credenciales de Firebase Console.
 
+> **Nota:** Los videos ya están incluidos y optimizados. El video principal fue comprimido de 204MB a 6MB para facilitar el clonado del repositorio.
+
 4. **Iniciar el servidor de desarrollo**
 ```bash
 npm start
