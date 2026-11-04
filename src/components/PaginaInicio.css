@@ -1,0 +1,215 @@
+/* PaginaInicio.css - Estilos específicos de la página de inicio */
+
+/* ============================================
+   ANIMACIONES ESPECÍFICAS DEL HERO
+   ============================================ */
+
+@keyframes fireGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.15) translateY(-15px);
+  }
+}
+
+@keyframes floatEmber {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-120vh) translateX(var(--tx, 0px));
+    opacity: 0;
+  }
+}
+
+@keyframes heroScale {
+  0% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes heroFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   ANIMACIONES DE CARRUSEL
+   ============================================ */
+
+@keyframes testimonialFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes dotPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes quoteFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+/* ============================================
+   ANIMACIONES DE GALERÍA DE PROCESO
+   ============================================ */
+
+@keyframes processCardEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes emojiPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* ============================================
+   CLASES APLICADAS
+   ============================================ */
+
+.hero-video {
+  animation: heroScale 1.2s ease-out forwards;
+}
+
+.hero-overlay {
+  animation: heroFade 1s ease-out forwards;
+}
+
+.hero-content {
+  animation: slideUp 1s ease-out forwards;
+}
+
+.fire-glow {
+  animation: fireGlow 4s ease-in-out infinite;
+}
+
+.fire-glow-secondary {
+  animation: fireGlow 3s ease-in-out infinite reverse;
+}
+
+.fire-glow-tertiary {
+  animation: fireGlow 3.5s ease-in-out infinite;
+}
+
+.ember {
+  animation: floatEmber 8s ease-in-out infinite;
+}
+
+.testimonial-card {
+  animation: testimonialFade 0.6s ease-out;
+}
+
+.testimonial-dot-active {
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+.quote-float {
+  animation: quoteFloat 6s ease-in-out infinite;
+}
+
+.process-card {
+  animation: processCardEnter 0.8s ease-out forwards;
+}
+
+.process-emoji {
+  animation: emojiPulse 2s ease-in-out infinite;
+}
+
+/* ============================================
+   EFECTOS HOVER ESPECÍFICOS
+   ============================================ */
+
+.carousel-button {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carousel-button:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-button:active {
+  transform: scale(0.9);
+}
+
+.location-card {
+  transition: all 0.3s ease;
+}
+
+.location-card:hover {
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .process-card {
+    animation-delay: 0.1s;
+  }
+
+  .testimonial-card {
+    padding: 1rem;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY - FOCUS STATES
+   ============================================ */
+
+.carousel-button:focus-visible {
+  outline: 2px solid #D4AC0D;
+  outline-offset: 2px;
+}
+
+.process-card:focus-visible {
+  outline: 2px solid #C0392B;
+  outline-offset: 4px;
+}

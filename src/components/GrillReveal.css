@@ -1,0 +1,38 @@
+/* ═══════════════════════════════════════════════════════════════
+   GrillReveal.css
+   Overlay de pantalla completa para la animación de parrilla.
+   El canvas Three.js se monta dentro de este div.
+   ═══════════════════════════════════════════════════════════════ */
+
+.grill-reveal-mount {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  background: #030100;
+
+  /* Transición de aparición */
+  transition: opacity 0.25s ease;
+}
+
+.grill-reveal-mount.grill-reveal-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* El canvas de Three.js ocupa todo el espacio */
+.grill-reveal-mount canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  inset: 0;
+}
+
+/* Accesibilidad: reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .grill-reveal-mount {
+    display: none !important;
+  }
+}
